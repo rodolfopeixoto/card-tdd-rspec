@@ -13,7 +13,9 @@ describe Card do
   end
 
  it 'has a suit' do
-   raise unless card(suit: :spades).suit == :spades
+   actual = card(suit: :spades).suit
+   expected = :spades
+   raise "Expected #{expected.inspect} , got #{actua.inspect}" unless actual == expected
  end
  it 'has a rank' do
   raise unless card(suit: :spades, rank: 4).rank == 4
